@@ -1,5 +1,7 @@
 package com.example.giel.parking.services.implementations;
 
+import static java.util.Objects.isNull;
+
 import com.example.giel.parking.models.UserInfo;
 import com.example.giel.parking.repositories.dao.UserInfoRepository;
 import com.example.giel.parking.services.interfaces.IUserInfoService;
@@ -38,7 +40,9 @@ public class UserInfoServiceImpl implements IUserInfoService {
 
   @Override
   public UserInfo getUserInfoByUuid(String uuid) {
-    return null;
+    UserInfo foundUser = userInfoRepository.getUserInfoByUuid(uuid);
+
+    return foundUser;
   }
 
 

@@ -38,7 +38,8 @@ public class UserInfoController {
     return ResponseEntity.ok(userInfoService.getAllUserInfos());
   }
 
-  @GetMapping(value = "/users/user/{useruuId}", produces = APPLICATION_JSON_UTF8_VALUE)
+  @CrossOrigin(origins = "http://localhost:3000")
+  @GetMapping(value = "/user/{useruuId}", produces = APPLICATION_JSON_UTF8_VALUE)
   public Long getUserInfoIdByUuid(@PathVariable("useruuId") String uuid) {
     return userInfoService.getUserInfoByUuid(uuid).getId();
   }

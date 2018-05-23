@@ -10,4 +10,8 @@ public interface IUserInfoService {
 
   List<UserInfo> getAllUserInfos();
 
+  String getUuidByUserInfoId(Long userInfoId);
+
+  UserInfo getUserInfoByUuid(String uuid);
+
 }

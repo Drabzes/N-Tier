@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/balance")
+@RequestMapping("api/userservice/balance")
 public class BalanceController {
 
   @Autowired

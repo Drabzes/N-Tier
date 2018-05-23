@@ -31,6 +31,16 @@ public class UserInfoServiceImpl implements IUserInfoService {
     return userInfoRepository.findAll();
   }
 
+  @Override
+  public String getUuidByUserInfoId(Long userInfoId) {
+    return userInfoRepository.findById(userInfoId).get().getUuid();
+  }
+
+  @Override
+  public UserInfo getUserInfoByUuid(String uuid) {
+    return null;
+  }
+
 
   public UserInfo saveAndFlushUserInfo(UserInfo userInfoToSave) {
     return userInfoRepository.saveAndFlush(userInfoToSave);
